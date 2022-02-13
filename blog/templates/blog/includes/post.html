@@ -1,0 +1,38 @@
+{% load static %}
+
+
+        <link  rel="stylesheet" href="{% static "blog/post.css" %}"/> 
+
+
+
+
+
+  <li>
+
+                        <article class="post">
+
+                            <a href="{% url "content" post.slug %}">
+
+                                    <img src="{{post.image.url}}" alt="{{post.title}}"/>
+
+                                    <div class="post__content">
+
+                                        <h3>{{post.title}}</h3>
+
+                                        <p>{{post.excerpt}}
+                                        </p>
+
+
+                                    </div>
+
+
+                            </a>
+
+
+
+
+                        </article>
+
+                    </li>
+
+

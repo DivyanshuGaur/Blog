@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+{%  block title %}
+
+    MY BLOG
+
+{% endblock %}
+
+
+{% block css_files %}
+
+          <link  rel="stylesheet" href="{% static "blog/index.css" %}"/> 
+          <link  rel="stylesheet" href="{% static "blog/post.css" %}"/> 
+
+
+
+
+{% endblock %}
+
+
+{%  block content %}
+
+
+
+       <section id="welcome">
+
+
+            <header>
+
+                    <img src="{% static "blog/images/pp.jpg" %}" alt="Divyanshu's Image"> </img>
+
+                    <h2>Technical Blog</h2>
+
+            </header>
+
+
+                                <p> Hi Divyanshu here , Welcome to Tech Blogs </p>
+
+
+
+
+       </section>
+
+
+       <section id="latest-posts">
+
+                <h2>My Latest Knowledge Bits</h2>
+
+
+                <ul>
+                        {% for post in posts %}
+
+                        {% include "blog/includes/post.html"  %}
+                        
+                        
+                        {% endfor %}       
+                </ul>
+
+
+       </section>
+
+
+
+<section id="about">
+
+    <h3> What i do? </h3>
+
+    <p> I am a Software Engineer , currently learning Full Stack Development </p>
+
+    <p> I am having knowledge in data analytics , Machine learning , 
+    Data Science and ETL </p>
+
+</section>
+
+
+
+{% endblock %}
